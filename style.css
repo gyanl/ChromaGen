@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Intro';
+}
+
+#footer {
+	height: 100px;
+	margin: auto;
+}
+
+#footer p {	
+	padding: 8px 18px;
+	margin: 30px;
+	color: #29323F;
+	background: #fff;
+	border-radius: 25px;
+	width: 10%;
+	/*float: left;*/
+}
+
+#footer p:hover {
+	cursor: pointer;
+}
