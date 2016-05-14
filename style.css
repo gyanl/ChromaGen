@@ -4,6 +4,15 @@ body{
 	transition-duration: 1.5s;
 }
 
+.circle{
+	min-width: 32px;
+	min-height: 32px;
+	background: #000;
+	margin: 4px;
+	border-radius: 32px;
+	display: inline-block;;
+}
+
 .toasty{
 background: rgba(0, 0, 0, 0.7);
 font-family: monospace;
