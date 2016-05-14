@@ -28,8 +28,12 @@
 				document.getElementById('clipboard').style.background = newColour;
 				document.getElementById('generate').style.background = newColour;
         document.getElementById('clipboard').setAttribute("data-clipboard-text",newColour);
-				document.getElementById("toast").innerHTML = newColour + " copied to clipboard.";
+				
 
+    }
+    
+    function toast() {
+    	document.getElementById("toast").innerHTML = this.getAttribute("data-clipboard-text") + " copied to clipboard.";
     }
 
     function start() {
@@ -45,7 +49,7 @@
 <center>
         <button class="btn" id='generate' onclick="changeColour(this)">Randomize</button>
 				<p>
-				<button class="btn" id='clipboard' data-clipboard-text="1">Copy</button>
+				<button class="btn" id='clipboard' data-clipboard-text="1" onclick="toast()">Copy</button>
 
 <div class="toasty" id="toast">
 Hex code copied!
