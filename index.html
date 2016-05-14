@@ -28,6 +28,8 @@
 				document.getElementById('clipboard').style.background = newColour;
 				document.getElementById('generate').style.background = newColour;
         document.getElementById('clipboard').setAttribute("data-clipboard-text",newColour);
+				document.getElementById("toast").innerHTML = newColour + " copied to clipboard.";
+
     }
 
     function start() {
