@@ -32,8 +32,8 @@
 
     }
     
-    function toast() {
-    	document.getElementById("toast").innerHTML = this.getAttribute("data-clipboard-text") + " copied to clipboard.";
+    function toast(yo) {
+    	document.getElementById("toast").innerHTML = yo.getAttribute("data-clipboard-text") + " copied to clipboard.";
     }
 
     function start() {
@@ -47,9 +47,9 @@
 <body onload="start()">
 <div class="box">
 <center>
-        <button class="btn" id='generate' onclick="changeColour(this)">Randomize</button>
+        <button class="btn" id='generate' onclick="changeColour()">Randomize</button>
 				<p>
-				<button class="btn" id='clipboard' data-clipboard-text="1" onclick="toast()">Copy</button>
+				<button class="btn" id='clipboard' data-clipboard-text="1" onclick="toast(this)">Copy</button>
 
 <div class="toasty" id="toast">
 Hex code copied!
