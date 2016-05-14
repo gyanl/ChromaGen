@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.10/clipboard.min.js"></script>
     <script type="text/javascript">
-    function color() {
+    function genColor() {
         var a = "";
         for (var i = 0; i < 3; i++)
             a = a.concat(Math.floor(Math.random() * 255).toString(16));
@@ -22,26 +22,24 @@
 
 
     function changeColour() {
-        var newColour = color();
+    	console.log("entering funtion");
+        var newColour = genColor();
         document.body.style.backgroundColor = newColour;
-        document.getElementById("hex").style.color = newColour;
-        document.getElementById("randomize").style.color = newColour;
+        document.getElementById('clipboard').setAttribute("data-clipboard-text",newColour);
     }
 
-    //copy to clipboard
-    var btn = document.getElementById('hex');
-    var clipboard = new Clipboard(btn);
-
-
+    function start() {
+    var clipboard = new Clipboard('.btn');
+    changeColour();
+    }
     </script>
 </head>
 
-<body onload="changeColour()">
+
+<body onload="start()">
     <center>
-        <div id="footer">
-            <p onclick="copyHex()" id="hex"> COPY HEX </p>
-            <p onclick="changeColour()" id="randomize"> RANDOMIZE </p>
-        </div>
+        <button class="btn" id='clipboard' data-clipboard-text="1">Copy</button>
+        <button class="btn" onclick="changeColour(this)">Randomize</button>
     </center>
 </body>
 
