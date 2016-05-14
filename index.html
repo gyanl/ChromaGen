@@ -40,11 +40,13 @@
         document.body.style.backgroundColor = newColour[number];
 				document.getElementById('clipboard').style.background = newColour[number];
 				document.getElementById('generate').style.background = newColour[number];
-				document.getElementById('c1').style.background = newColour[number];
-				document.getElementById('c2').style.background = newColour[(number+4)%5];
-				document.getElementById('c3').style.background = newColour[(number+3)%5];
-				document.getElementById('c4').style.background = newColour[(number+2)%5];
-				document.getElementById('c5').style.background = newColour[(number+1)%5];
+				var div_id = "c";
+
+                for(var i =0 ; i < 5;i++) {
+                    div_id = "c"+(i+1);
+                    document.getElementById(div_id).style.background = newColour[(number+i)%5];
+                 }
+ 
         document.getElementById('clipboard').setAttribute("data-clipboard-text",newColour[n]);
 
 
