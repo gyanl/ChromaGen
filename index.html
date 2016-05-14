@@ -41,10 +41,10 @@
 				document.getElementById('clipboard').style.background = newColour[number];
 				document.getElementById('generate').style.background = newColour[number];
 				document.getElementById('c1').style.background = newColour[number];
-				document.getElementById('c2').style.background = newColour[(number+1)%5];
-				document.getElementById('c3').style.background = newColour[(number+2)%5];
-				document.getElementById('c4').style.background = newColour[(number+3)%5];
-				document.getElementById('c5').style.background = newColour[(number+4)%5];
+				document.getElementById('c2').style.background = newColour[(number+4)%5];
+				document.getElementById('c3').style.background = newColour[(number+3)%5];
+				document.getElementById('c4').style.background = newColour[(number+2)%5];
+				document.getElementById('c5').style.background = newColour[(number+1)%5];
         document.getElementById('clipboard').setAttribute("data-clipboard-text",newColour[n]);
 
 
@@ -82,10 +82,10 @@ Welcome to ChromaGen!
 <p>
 
 <div id="c1" class="circle"></div>
-<div id="c5" class="circle"></div>
-<div id="c4" class="circle"></div>
-<div id="c3" class="circle"></div>
 <div id="c2" class="circle"></div>
+<div id="c3" class="circle"></div>
+<div id="c4" class="circle"></div>
+<div id="c5" class="circle"></div>
 
 </center>
 </div>
