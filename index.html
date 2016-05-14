@@ -40,13 +40,12 @@
         document.body.style.backgroundColor = newColour[number];
 				document.getElementById('clipboard').style.background = newColour[number];
 				document.getElementById('generate').style.background = newColour[number];
-				var div_id = "c";
 
                 for(var i =0 ; i < 5;i++) {
-                    div_id = "c"+(i+1);
+                    var div_id = "c"+(i+1);
                     document.getElementById(div_id).style.background = newColour[(number+i)%5];
                  }
- 
+    
         document.getElementById('clipboard').setAttribute("data-clipboard-text",newColour[n]);
 
 
