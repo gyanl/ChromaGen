@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Colour A Day</title>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+		<center>
+
+			<div id="footer">
+
+					<p onclick="copyHex()" id="hex"> COPY HEX </p>
+
+					<p onclick="changeColour()" id="randomize"> RANDOMIZE </p>
+
+			</div>	
+
+		</center>
+
+	<script type="text/javascript">
+
+		var colorList = ["#f44336", "#f44336", "#e53935", "#d32f2f", "#c62828", "#b71c1c", "#ff8a80", "#ff5252", "#ff1744", "#d50000","#e91e63", "#ec407a", "#e91e63", "#d81b60", "#c2185b", "#ad1457", "#880e4f", "#ff80ab", "#ff4081", "#f50070", "#c51162", "#9c27b0", "#ab47bc", "#9c27b0", "#8e24aa", "#7b1fa2", "#6a1b9a", "#4a148c", "#ea80fc", "#e040fb", "#df9000", "#aa00ff", "#673ab7", "#7e57c2", "#673ab7", "#5e35b1", "#512da8", "#4527a0", "#311b92", "#b388ff", "#7c4dff", "#651fff", "#6000ea", "#2196f3", "#64b5f6", "#42a5f5", "#2196f3", "#1e88e5", "#1976d2", "#1565c0", "#0d47a1", "#82b1ff", "#448aff", "#2979ff", "#2962ff"];
+   
+   		d = new Date(); 
+  		days = d.getTime() / (1000*60*60*24); 
+    	idx = Math.floor(days) % colorList.length;
+		newDay(colorList[idx]); 
+
+		function newDay(nayaColour) {
+
+			document.body.style.backgroundColor = nayaColour;
+
+			document.getElementById("hex").style.color = nayaColour;
+
+			document.getElementById("randomize").style.color = nayaColour;
+		}
+
+		function changeColour() {
+
+			var newColour = colorList[Math.floor(Math.random() * 55)];
+
+			document.body.style.backgroundColor = newColour;
+
+			document.getElementById("hex").style.color = newColour;
+
+			document.getElementById("randomize").style.color = newColour;
+		}
+
+	</script>
+
+</body>
+</html>
