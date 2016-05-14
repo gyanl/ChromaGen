@@ -25,6 +25,8 @@
     	console.log("entering funtion");
         var newColour = genColor();
         document.body.style.backgroundColor = newColour;
+				document.getElementById('clipboard').style.background = newColour;
+				document.getElementById('generate').style.background = newColour;
         document.getElementById('clipboard').setAttribute("data-clipboard-text",newColour);
     }
 
@@ -37,10 +39,18 @@
 
 
 <body onload="start()">
-    <center>
-        <button class="btn" id='clipboard' data-clipboard-text="1">Copy</button>
-        <button class="btn" onclick="changeColour(this)">Randomize</button>
-    </center>
+<div class="box">
+<center>
+        <button class="btn" id='generate' onclick="changeColour(this)">Randomize</button>
+				<p>
+				<button class="btn" id='clipboard' data-clipboard-text="1">Copy</button>
+
+<div class="toasty" id="toast">
+Hex code copied!
+</div>
+
+</center>
+</div>
 </body>
 
 </html>
