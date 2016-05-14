@@ -43,7 +43,7 @@
 
                 for(var i =0 ; i < 5;i++) {
                     var div_id = "c"+(i+1);
-                    document.getElementById(div_id).style.background = newColour[(number+i)%5];
+                    document.getElementById(div_id).style.background = newColour[(number+5-i)%5];
                  }
     
         document.getElementById('clipboard').setAttribute("data-clipboard-text",newColour[n]);
