@@ -8,7 +8,19 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.10/clipboard.min.js"></script>
     <script type="text/javascript">
+
+		var n=0;
+		var newColour = [];
+
+
+		function getN() {
+			n=(n+1)%5;
+			console.log("entering funtion" + n);
+			return n;
+		}
+
     function genColor() {
+
         var a = "";
         for (var i = 0; i < 3; i++)
             a = a.concat(Math.floor(Math.random() * 255).toString(16));
@@ -23,11 +35,17 @@
 
     function changeColour() {
     	console.log("entering funtion");
-        var newColour = genColor();
-        document.body.style.backgroundColor = newColour;
-				document.getElementById('clipboard').style.background = newColour;
-				document.getElementById('generate').style.background = newColour;
-        document.getElementById('clipboard').setAttribute("data-clipboard-text",newColour);
+				var number = getN();
+				newColour[number] = genColor();
+        document.body.style.backgroundColor = newColour[number];
+				document.getElementById('clipboard').style.background = newColour[number];
+				document.getElementById('generate').style.background = newColour[number];
+				document.getElementById('c1').style.background = newColour[number];
+				document.getElementById('c2').style.background = newColour[(number+1)%5];
+				document.getElementById('c3').style.background = newColour[(number+2)%5];
+				document.getElementById('c4').style.background = newColour[(number+3)%5];
+				document.getElementById('c5').style.background = newColour[(number+4)%5];
+        document.getElementById('clipboard').setAttribute("data-clipboard-text",newColour[n]);
 
 
     }
@@ -62,11 +80,13 @@ A random color generator.
 Welcome to ChromaGen!
 </div>
 <p>
-<div class="circle" id="c1">.</div>
-<div class="circle" id="c2">.</div>
-<div class="circle" id="c3">.</div>
-<div class="circle" id="c4">.</div>
-<div class="circle" id="c5">.</div>
+
+<div id="c1" class="circle"></div>
+<div id="c5" class="circle"></div>
+<div id="c4" class="circle"></div>
+<div id="c3" class="circle"></div>
+<div id="c2" class="circle"></div>
+
 </center>
 </div>
 </body>
