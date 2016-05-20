@@ -1,2 +1,2 @@
-# A-Color-A-Day
+# Chroma-Gen
 Random pretty color generator
