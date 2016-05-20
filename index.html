@@ -8,17 +8,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.10/clipboard.min.js"></script>
     <script type="text/javascript">
+    var n = 0;
+    var newColour = [];
 
-		var n=0;
-		var newColour = [];
-
-
-
-		// function getN() {
-		// 	n=(n+1)%5;
-		// 	console.log("entering funtion" + n);
-		// 	return n;
-		// }
 
     function genColor() {
         var a = "";
@@ -26,7 +18,7 @@
             a = a.concat(Math.floor(Math.random() * 255).toString(16));
 
         if (a.length < 6) {
-            for (var i = 0; i < (6-a.length); i++)
+            for (var i = 0; i < (6 - a.length); i++)
                 a = "0" + a;
         }
         return "#" + a;
@@ -34,73 +26,64 @@
 
 
     function changeColour(num) {
-		if(num != 0) {
-            new_color = newColour[(num-1)];
+        if (num != 0) {
+            new_color = newColour[(num - 1)];
             outline();
             // either use the fn or just write the code here.
-        }
-        else {
+        } else {
             new_color = genColor();
             newColour.unshift(new_color);
-            for(var i =0 ; i < 5;i++) {
-                var div_id = "c"+(i+1);
+            for (var i = 0; i < 5; i++) {
+                var div_id = "c" + (i + 1);
                 document.getElementById(div_id).style.background = newColour[i];
             }
         }
 
-        
-        document.body.style.backgroundColor = new_color;
-		document.getElementById('clipboard').style.background = new_color;
-		document.getElementById('generate').style.background = new_color;
 
-            
-    
-        document.getElementById('clipboard').setAttribute("data-clipboard-text",new_color);
+        document.body.style.backgroundColor = new_color;
+        document.getElementById('clipboard').style.background = new_color;
+        document.getElementById('generate').style.background = new_color;
+        document.getElementById('clipboard').setAttribute("data-clipboard-text", new_color);
 
 
     }
 
     function toast(yo) {
-    	document.getElementById("toast").innerHTML = yo.getAttribute("data-clipboard-text") + " copied to clipboard.";
-
+        document.getElementById("toast").innerHTML = yo.getAttribute("data-clipboard-text") + " copied to clipboard.";
     }
 
     function start() {
-    var clipboard = new Clipboard('.btn');
-    changeColour(0);
+        var clipboard = new Clipboard('.btn');
+        changeColour(0);
     }
-
+    
     </script>
 </head>
 
-
 <body onload="start()">
-<div class="box">
-<center>
-<div class="header">
-ChromaGen
-</div>
-<div class="subheader">
-A random color generator.
-</div>
-	<p>
-        <button class="btn" id='generate' onclick="changeColour(0)">Randomize</button>
-				<p>
-				<button class="btn" id='clipboard' data-clipboard-text="1" onclick="toast(this)">Copy</button>
-
-<div class="toasty" id="toast">
-Welcome to ChromaGen!
-</div>
-<p>
-
-<div id="c1" class="circle" onclick="changeColour(1)"></div>
-<div id="c2" class="circle" onclick="changeColour(2)"></div>
-<div id="c3" class="circle" onclick="changeColour(3)"></div>
-<div id="c4" class="circle" onclick="changeColour(4)"></div>
-<div id="c5" class="circle" onclick="changeColour(5)"></div>
-
-</center>
-</div>
+    <div class="box">
+        <center>
+            <div class="header">
+                ChromaGen
+            </div>
+            <div class="subheader">
+                A random color generator.
+            </div>
+            <p>
+                <button class="btn" id='generate' onclick="changeColour(0)">Randomize</button>
+                <p>
+                    <button class="btn" id='clipboard' data-clipboard-text="1" onclick="toast(this)">Copy</button>
+                    <div class="toasty" id="toast">
+                        Welcome to ChromaGen!
+                    </div>
+                    <p>
+                        <div id="c1" class="circle" onclick="changeColour(1)"></div>
+                        <div id="c2" class="circle" onclick="changeColour(2)"></div>
+                        <div id="c3" class="circle" onclick="changeColour(3)"></div>
+                        <div id="c4" class="circle" onclick="changeColour(4)"></div>
+                        <div id="c5" class="circle" onclick="changeColour(5)"></div>
+        </center>
+    </div>
 </body>
 
 </html>
