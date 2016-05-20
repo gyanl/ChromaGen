@@ -34,20 +34,26 @@
 
 
     function changeColour(num) {
-		if(num != 0)
+		if(num != 0) {
             new_color = newColour[(num-1)];
-        else    
+            outline();
+            // either use the fn or just write the code here.
+        }
+        else {
             new_color = genColor();
-
-        newColour.unshift(new_color);
-        document.body.style.backgroundColor = new_color;
-		document.getElementById('clipboard').style.background = new_color;
-		document.getElementById('generate').style.background = new_color;
-
+            newColour.unshift(new_color);
             for(var i =0 ; i < 5;i++) {
                 var div_id = "c"+(i+1);
                 document.getElementById(div_id).style.background = newColour[i];
             }
+        }
+
+        
+        document.body.style.backgroundColor = new_color;
+		document.getElementById('clipboard').style.background = new_color;
+		document.getElementById('generate').style.background = new_color;
+
+            
     
         document.getElementById('clipboard').setAttribute("data-clipboard-text",new_color);
 
