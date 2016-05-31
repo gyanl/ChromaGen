@@ -16,9 +16,9 @@ body{
 	margin: 4px;
 	border-radius: 32px;
 	display: inline-block;
-	-webkit-transition-duration: 0.2s;
-	-moz-transition-duration: 0.2s;
-	transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s linear;
+	-moz-transition-duration: 0.2s linear;
+	transition-duration: 0.2s linear;
 }
 
 .circle:active{
@@ -55,7 +55,6 @@ transition-duration: 0.2s;
 .box{
 	padding: 30px;
 	max-width: 360px;
-	height: 300px;
 	margin: auto;
 	vertical-align: middle;
 	background: #fff;
@@ -89,9 +88,10 @@ button:active{
 }
 
 .dabba{
-	position:static;
-	vertical-align: middle;
-	height: 60px;
+vertical-align: middle;
+-ms-transform: rotate(270deg); /* IE 9 */
+-webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+transform: rotate(270deg);
 }
 
 .header{
