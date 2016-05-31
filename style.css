@@ -4,6 +4,10 @@ body{
 	transition-duration: 1.2s;
 }
 
+.btn{
+	width: 150px;
+}
+
 .circle{
 	min-width: 32px;
 	min-height: 32px;
@@ -23,6 +27,17 @@ body{
 	border: 4px;
 }
 
+.circle:focus{
+	box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.75);
+	transform: scale(1.5,1.5);
+	border-color: #123456;
+	border: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+
+
+}
+
 .toasty{
 background: rgba(0, 0, 0, 0.7);
 font-family: monospace;
@@ -38,7 +53,7 @@ transition-duration: 0.2s;
 .box{
 	padding: 30px;
 	max-width: 360px;
-	height: auto;
+	height: 300px;
 	margin: auto;
 	vertical-align: middle;
 	background: #fff;
@@ -54,7 +69,6 @@ button{
 	vertical-align: middle;
 	font-size: 16px;
 	border: none;
-	width: 150px;
 	border-radius: 30px;
 	padding: 12px;
 	box-shadow: 0px 2px 10px -6px rgba(0, 0, 0, 0.75);
