@@ -35,8 +35,6 @@
             for (var i = 0; i < 6; i++) {
                 var div_id = "c" + (i);
                 document.getElementById(div_id).style.background = newColour[i];
-                document.getElementById('c0').focus();
-
             }
         }
 
@@ -55,7 +53,6 @@
 
     function start() {
         var clipboard = new Clipboard('.btn');
-        document.getElementById('c0').focus();
         changeColour(-1);
     }
 
@@ -79,15 +76,12 @@
                         Welcome to ChromaGen!
                     </div>
                     <p>
-                      <div class="dabba">
                         <button id="c0" class="circle" onclick="changeColour(0)"></button>
                         <button id="c1" class="circle" onclick="changeColour(1)"></button>
                         <button id="c2" class="circle" onclick="changeColour(2)"></button>
                         <button id="c3" class="circle" onclick="changeColour(3)"></button>
                         <button id="c4" class="circle" onclick="changeColour(4)"></button>
                         <button id="c5" class="circle" onclick="changeColour(5)"></button>
-                      </div>
-
         </center>
     </div>
 </body>
