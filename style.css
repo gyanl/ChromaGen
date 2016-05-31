@@ -11,13 +11,14 @@ body{
 .circle{
 	min-width: 32px;
 	min-height: 32px;
+	padding-top: 16px;
 	background: #fff;
 	margin: 4px;
 	border-radius: 32px;
 	display: inline-block;
-	-webkit-transition-duration: 0.3s;
-	-moz-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	transition-duration: 0.2s;
 }
 
 .circle:active{
@@ -29,12 +30,13 @@ body{
 
 .circle:focus{
 	box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.75);
-	transform: scale(1.5,1.5);
+	min-width: 48px;
+	min-height: 48px;
 	border-color: #123456;
 	border: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-
+	padding-top: 8px;
+	margin-left: 8px;
+	margin-right: 8px;
 
 }
 
@@ -84,6 +86,12 @@ button:active{
 	transform: scale(1.05,1.05);
 	border-color: #000;
 	border: 4px;
+}
+
+.dabba{
+	position:static;
+	vertical-align: middle;
+	height: 60px;
 }
 
 .header{
