@@ -1,3 +1,10 @@
+<!--
+@Author: gyanl, ananayarora
+@Date:   2016-09-29T09:54:38+05:30
+@Last modified by:   ananayarora
+@Last modified time: 2016-09-29T10:05:08+05:30
+-->
+
 <!DOCTYPE html>
 <html>
 
@@ -7,57 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.10/clipboard.min.js"></script>
-    <script type="text/javascript">
-
-    var newColour = [];
-
-    function genColor() {
-        var a = "";
-        for (var i = 0; i < 3; i++)
-            a = a.concat(Math.floor(Math.random() * 255).toString(16));
-
-        if (a.length < 6) {
-            for (var i = 0; i < (6 - a.length); i++)
-                a = "0" + a;
-        }
-        return "#" + a;
-    }
-
-
-    function changeColour(num) {
-        if (num != -1) {
-            new_color = newColour[num];
-            //outline();  either use the fn or just write the code here.
-
-        } else {
-            new_color = genColor();
-            newColour.unshift(new_color);
-            for (var i = 0; i < 6; i++) {
-                var div_id = "c" + (i);
-                document.getElementById(div_id).style.background = newColour[i];
-                document.getElementById('c0').focus();
-            }
-        }
-
-
-        document.body.style.backgroundColor = new_color;
-        document.getElementById('clipboard').style.background = new_color;
-        document.getElementById('generate').style.background = new_color;
-        document.getElementById('clipboard').setAttribute("data-clipboard-text", new_color);
-
-
-    }
-
-    function toast(yo) {
-        document.getElementById("toast").innerHTML = yo.getAttribute("data-clipboard-text") + " copied to clipboard.";
-    }
-
-    function start() {
-        var clipboard = new Clipboard('.btn');
-        changeColour(-1);
-    }
-
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body onload="start()">
@@ -69,20 +26,21 @@
             <div class="subheader">
                 A random color generator.
             </div>
-            <p>
-                <button class="btn" id='generate' onclick="changeColour(-1)">Randomize</button>
-                <p>
-                    <button class="btn" id='clipboard' data-clipboard-text="1" onclick="toast(this)">Copy</button>
-                    <div class="toasty" id="toast">
-                        Welcome to ChromaGen!
-                    </div>
-                    <p>
-                        <button id="c0" class="circle" onclick="changeColour(0)"></button>
-                        <button id="c1" class="circle" onclick="changeColour(1)"></button>
-                        <button id="c2" class="circle" onclick="changeColour(2)"></button>
-                        <button id="c3" class="circle" onclick="changeColour(3)"></button>
-                        <button id="c4" class="circle" onclick="changeColour(4)"></button>
-                        <button id="c5" class="circle" onclick="changeColour(5)"></button>
+            <br /><br />
+            <button class="btn" id='generate' onclick="changeColour(-1)">Randomize</button>
+            <br /><br />
+            <button class="btn" id='clipboard' data-clipboard-text="1" onclick="toast(this)">Copy</button>
+            <br /><br />
+            <div class="toasty" id="toast">
+                Welcome to ChromaGen!
+            </div>
+            <br /><br />
+            <button id="c0" class="circle" onclick="changeColour(0)"></button>
+            <button id="c1" class="circle" onclick="changeColour(1)"></button>
+            <button id="c2" class="circle" onclick="changeColour(2)"></button>
+            <button id="c3" class="circle" onclick="changeColour(3)"></button>
+            <button id="c4" class="circle" onclick="changeColour(4)"></button>
+            <button id="c5" class="circle" onclick="changeColour(5)"></button>
         </center>
     </div>
 </body>
