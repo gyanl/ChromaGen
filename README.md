@@ -21,7 +21,7 @@ It's useful when you're trying to pick a color for a design.
 * one-click hex code copying
 * responsive design
 
-### Built using
+### Built with
 
 * love
 * html
