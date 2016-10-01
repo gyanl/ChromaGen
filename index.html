@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.10/clipboard.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/colorSwitcher.js"></script>
 </head>
 
 <body onload="start()">
@@ -26,7 +27,13 @@
             <div class="subheader">
                 A random color generator.
             </div>
-            <br /><br />
+            <br />
+            <form>
+                <input type="radio" name="colorformat" id="hex" value="hex" onClick="changeColorFormat()" checked>HEX
+                <input type="radio" name="colorformat" id="hsl" value="hsl" onClick="changeColorFormat()">HSL
+                <input type="radio" name="colorformat" id="rgb" value="rgb" onClick="changeColorFormat()">RGB
+            </form>
+            <br />
             <button class="btn" id='generate' onclick="changeColour(-1)">Randomize</button>
             <br /><br />
             <button class="btn" id='clipboard' data-clipboard-text="1" onclick="toast(this)">Copy</button>
@@ -36,7 +43,7 @@
             <div class="toasty" id="toast">
                 Welcome to ChromaGen!
             </div>
-            <br /><br />
+            <br /><br /><br />
             <button id="c0" class="circle" onclick="changeColour(0)"></button>
             <button id="c1" class="circle" onclick="changeColour(1)"></button>
             <button id="c2" class="circle" onclick="changeColour(2)"></button>
