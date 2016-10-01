@@ -45,7 +45,7 @@ function toast(yo) {
 function copyAll(yo) {
     var colors = newColour[0];
     for (var i = 1; i < 6; i++) {
-        if ( newColour[i] ) {
+        if (newColour[i]) {
             colors = colors + ", " + newColour[i];
         }
     }
