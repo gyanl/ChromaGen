@@ -42,6 +42,17 @@ function toast(yo) {
     document.getElementById("toast").innerHTML = yo.getAttribute("data-clipboard-text") + " copied to clipboard.";
 }
 
+function copyAll(yo) {
+    var colors = newColour[0];
+    for (var i = 1; i < 6; i++) {
+        if ( newColour[i] ) {
+            colors = colors + ", " + newColour[i];
+        }
+    }
+    document.getElementById('copyall').setAttribute("data-clipboard-text", colors);
+    document.getElementById("toast").innerHTML = yo.getAttribute("data-clipboard-text") + " copied to clipboard.";
+}
+
 function start() {
     var clipboard = new Clipboard('.btn');
     changeColour(-1);
