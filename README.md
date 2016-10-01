@@ -8,4 +8,27 @@
 
 
 # Chroma Gen
-Random pretty color generator
+
+ChromaGen is a simple random color generator.
+
+### But why?
+
+It's useful when you're trying to pick a color for a design.
+
+### Features
+
+* random color generation
+* one-click hex code copying
+* responsive design
+
+### Built using
+
+* love
+* html
+* css
+* javascript
+
+### Contributors
+
+* [Gyan Lakhwani](https://github.com/gyanl)
+* [Manvendra Singh](https://github.com/manu-chroma)
