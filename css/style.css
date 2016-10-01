@@ -40,9 +40,8 @@ body {
 	-webkit-transition: -webkit-transform 0.3s ease;
 	-moz-transform: scale(1.5,1.5);;
 	-moz-transition: -moz-transform 0.3s ease;
-	transform: scale(1.5,1.5);;
+	transform: scale(1.5,1.5);
 	transition: transform 0.3s ease;
-
 }
 
 .toasty {
@@ -57,11 +56,12 @@ body {
 	transition-duration: 0.2s;
 }
 
-.box {
+.box{
 	padding: 30px;
-	max-width: 360px;
-	height: 340px;
-	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 	vertical-align: middle;
 	background: #fff;
 	border-radius: 10px;
@@ -109,8 +109,8 @@ button:active {
 }
 
 @media only screen and (max-width: 768px) {
-	.box{
-		width: 360px;
-		padding-bottom:30px;
-	}
+
+.box{
+	width: 85vw;
+}
 }
