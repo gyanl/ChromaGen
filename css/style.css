@@ -56,20 +56,12 @@ body {
 	transition-duration: 0.2s;
 }
 
-<<<<<<< HEAD:style.css
 .box{
 	padding: 20px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-=======
-.box {
-	padding: 30px;
-	max-width: 360px;
-	height: 300px;
-	margin: auto;
->>>>>>> origin/gh-pages:css/style.css
 	vertical-align: middle;
 	background: #fff;
 	border-radius: 10px;
@@ -117,16 +109,8 @@ button:active {
 }
 
 @media only screen and (max-width: 768px) {
-<<<<<<< HEAD:style.css
 
 .box{
 	width: 85vw;
 }
-
-=======
-	.box{
-		width: 360px;
-		padding-bottom:30px;
-	}
->>>>>>> origin/gh-pages:css/style.css
 }
