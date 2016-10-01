@@ -32,3 +32,4 @@ It's useful when you're trying to pick a color for a design.
 
 * [Gyan Lakhwani](https://github.com/gyanl)
 * [Manvendra Singh](https://github.com/manu-chroma)
+* [Ananay Arora](https://github.com/ananay)
