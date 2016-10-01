@@ -6,6 +6,11 @@
 */
 
 var newColour = [];
+var format = 'hex';
+
+function changeColorFormat() {
+    format = document.querySelector('input[type="radio"]:checked').value;
+}
 
 function genColor() {
     var a = "";
@@ -35,18 +40,24 @@ function changeColour(num) {
     document.body.style.backgroundColor = new_color;
     document.getElementById('clipboard').style.background = new_color;
     document.getElementById('generate').style.background = new_color;
-    document.getElementById('clipboard').setAttribute("data-clipboard-text", new_color);
+    document.getElementById('clipboard').setAttribute("data-clipboard-text", formatColor(new_color));
+}
+
+function formatColor(color) {
+    color = convertColor(color, format);
+    return color;
 }
 
 function toast(yo) {
+    yo.setAttribute("data-clipboard-text", formatColor(newColour[0]));
     document.getElementById("toast").innerHTML = yo.getAttribute("data-clipboard-text") + " copied to clipboard.";
 }
 
 function copyAll(yo) {
-    var colors = newColour[0];
+    var colors = formatColor(newColour[0]);
     for (var i = 1; i < 6; i++) {
         if (newColour[i]) {
-            colors = colors + ", " + newColour[i];
+            colors = colors + ", " + formatColor(newColour[i]);
         }
     }
     document.getElementById('copyall').setAttribute("data-clipboard-text", colors);

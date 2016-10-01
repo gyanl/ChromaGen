@@ -48,7 +48,7 @@ body {
 .toasty {
 	background: rgba(0, 0, 0, 0.7);
 	font-family: monospace;
-	width: 240px;
+	width: 280px;
 	padding: 4px;
 	color: #fff;
 	border-radius: 20px;
@@ -60,7 +60,7 @@ body {
 .box {
 	padding: 30px;
 	max-width: 360px;
-	height: 300px;
+	height: 340px;
 	margin: auto;
 	vertical-align: middle;
 	background: #fff;
