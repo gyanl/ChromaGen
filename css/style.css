@@ -108,9 +108,8 @@ button:active {
 	font-family: monospace;
 }
 
-@media only screen and (max-width: 768px) {
-
-.box{
-	width: 85vw;
-}
+.option{
+		font-family: monospace;
+		font-size: 16px;
+		display: inline;
 }
