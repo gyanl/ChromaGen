@@ -40,6 +40,7 @@ function changeColour(num) {
     document.body.style.backgroundColor = new_color;
     document.getElementById('clipboard').style.background = new_color;
     document.getElementById('generate').style.background = new_color;
+    document.getElementById('copyall').style.background = new_color;
     document.getElementById('clipboard').setAttribute("data-clipboard-text", formatColor(new_color));
 }
 
