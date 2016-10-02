@@ -27,11 +27,11 @@
             <div class="subheader">
                 A random color generator.
             </div>
-            <br />
+            <p></p>
             <form>
-                <input type="radio" name="colorformat" id="hex" value="hex" onClick="changeColorFormat()" checked>HEX
-                <input type="radio" name="colorformat" id="hsl" value="hsl" onClick="changeColorFormat()">HSL
-                <input type="radio" name="colorformat" id="rgb" value="rgb" onClick="changeColorFormat()">RGB
+                <input type="radio" name="colorformat" id="hex" value="hex" onClick="changeColorFormat()" checked><div class="option">HEX </div>
+                <input type="radio" name="colorformat" id="hsl" value="hsl" onClick="changeColorFormat()"><div class="option">HSL </div>
+                <input type="radio" name="colorformat" id="rgb" value="rgb" onClick="changeColorFormat()"><div class="option">RGB </div>
             </form>
             <br />
             <button class="btn" id='generate' onclick="changeColour(-1)">Randomize</button>
