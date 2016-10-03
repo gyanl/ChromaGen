@@ -81,7 +81,6 @@ function start() {
 }
 
 function shiftColorLeft(num){
-    console.log(num);
     num -= 1;
     if(num < 0){
         num = numButtons - 1;
