@@ -69,3 +69,19 @@ function start() {
     var clipboard = new Clipboard('.btn');
     changeColour(-1);
 }
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+        case 82:
+						changeColour(-1);
+            break;
+        case 67:
+						var color = document.getElementById('clipboard');
+						toast(color)
+            break;
+        case 65:
+						var color = document.getElementById('copyall');
+						copyAll(color)
+            break;
+    }
+};
