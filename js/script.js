@@ -7,6 +7,9 @@
 
 var newColour = [];
 var format = 'hex';
+//The index of the currently selected color
+var currentColour = 0;
+var numColours = 0;
 
 function changeColorFormat() {
     format = document.querySelector('input[type="radio"]:checked').value;
@@ -26,11 +29,17 @@ function genColor() {
 
 function changeColour(num) {
     if (num != -1) {
-        new_color = newColour[num];
+        currentColour = num;
+        new_color = newColour[currentColour];
+        document.getElementById('c'+currentColour).focus();
         //outline();  either use the fn or just write the code here.
     } else {
+        currentColour = 0;
         new_color = genColor();
         newColour.unshift(new_color);
+        if (numColours<6){
+            numColours++;
+        }
         for (var i = 0; i < 6; i++) {
             var div_id = "c" + (i);
             document.getElementById(div_id).style.background = newColour[i];
@@ -50,7 +59,7 @@ function formatColor(color) {
 }
 
 function toast(yo) {
-    yo.setAttribute("data-clipboard-text", formatColor(newColour[0]));
+    yo.setAttribute("data-clipboard-text", formatColor(newColour[currentColour]));
     document.getElementById("toast").innerHTML = yo.getAttribute("data-clipboard-text") + " copied to clipboard.";
 }
 
@@ -78,12 +87,29 @@ document.onkeydown = function(e) {
 
         case 67:
         var color = document.getElementById('clipboard');
-        toast(color)
+        toast(color);
         break;
         
         case 65:
         var color = document.getElementById('copyall');
-        copyAll(color)
+        copyAll(color);
         break;
+
+        case 37:
+        if(currentColour>0){
+            changeColour(currentColour-1);
+        }
+        else{
+            changeColour(numColours-1);
+        }
+        break;
+
+        case 39:
+        if(currentColour<numColours-1){
+            changeColour(currentColour+1);
+        }
+        else{
+            changeColour(0);
+        }
     }
 };
