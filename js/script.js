@@ -73,6 +73,7 @@ function copyAll(yo) {
         }
     }
     document.getElementById('copyall').setAttribute("data-clipboard-text", colors);
+    copyTextToClipboard(colors)
     document.getElementById("toast").innerHTML = yo.getAttribute("data-clipboard-text") + " copied to clipboard.";
 }
 
