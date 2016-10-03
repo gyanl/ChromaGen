@@ -73,15 +73,17 @@ function start() {
 document.onkeydown = function(e) {
     switch (e.keyCode) {
         case 82:
-						changeColour(-1);
-            break;
+        changeColour(-1);
+        break;
+
         case 67:
-						var color = document.getElementById('clipboard');
-						toast(color)
-            break;
+        var color = document.getElementById('clipboard');
+        toast(color)
+        break;
+        
         case 65:
-						var color = document.getElementById('copyall');
-						copyAll(color)
-            break;
+        var color = document.getElementById('copyall');
+        copyAll(color)
+        break;
     }
 };
