@@ -34,3 +34,4 @@ It's useful when you're trying to pick a color for a design.
 * [Manvendra Singh](https://github.com/manu-chroma)
 * [Ananay Arora](https://github.com/ananay)
 * [Niharika Kohli](https://github.com/Niharika29)
+* [Petr Kletečka](https://github.com/petrkle)
