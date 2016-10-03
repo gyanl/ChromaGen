@@ -87,12 +87,12 @@ document.onkeydown = function(e) {
 
         case 67:
         var color = document.getElementById('clipboard');
-        toast(color);
+        color.click();
         break;
         
         case 65:
         var color = document.getElementById('copyall');
-        copyAll(color);
+        color.click();
         break;
 
         case 37:
