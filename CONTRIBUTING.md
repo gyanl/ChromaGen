@@ -7,3 +7,5 @@ or [manu-chroma](https://github.com/manu-chroma) will assign the issue to you. T
 
 Apart from that, it's a pretty small project, and as long as what you do works, it'll be accepted. 
 Hack on!
+
+Also, feel free to add your name to the contributors list https://github.com/gyanl/ChromaGen#contributors :)
