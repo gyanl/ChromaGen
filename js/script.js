@@ -34,9 +34,10 @@ function changeColour(num) {
     } else {
         new_color = genColor();
         newColour.unshift(new_color);
+        currentColor = 0;
         for (var i = 0; i < 6; i++) {
             var div_id = "c" + (i);
-            document.getElementById(div_id).style.background = newColour[i];
+            document.getElementById(div_id).styrle.background = newColour[i];
             document.getElementById('c0').focus();
         }
     }
