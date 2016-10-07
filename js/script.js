@@ -9,6 +9,28 @@ var newColour = [];
 var format = 'hex';
 var currentColor = 0;
 var numButtons = 6;
+var listOfIndexes = [0,1,2,3,4,5];
+
+function synchronize() {
+    function synchronizeList(index) {
+        if(index === currentColor) {
+            document.getElementById("c" + index).classList.add("focus");
+        }
+        else {
+            document.getElementById("c" + index).classList.remove("focus");
+        }
+    }
+
+    listOfIndexes.forEach(synchronizeList);
+}
+
+function clearFocus() {
+    function removeFocus(index) {
+        document.getElementById("c" + index).classList.remove("focus");
+    }
+
+    listOfIndexes.forEach(removeFocus);
+}
 
 function changeColorFormat() {
     format = document.querySelector('input[type="radio"]:checked').value;
@@ -27,9 +49,10 @@ function genColor() {
 }
 
 function changeColour(num) {
-    if (num != -1) {
+    if (num !== -1) {
         currentColor = num;
         new_color = newColour[num];
+        synchronize();
         //outline();  either use the fn or just write the code here.
     } else {
         new_color = genColor();
@@ -40,6 +63,7 @@ function changeColour(num) {
             document.getElementById(div_id).style.background = newColour[i];
             document.getElementById('c0').focus();
         }
+        clearFocus();
     }
     updateUI(new_color);
 }
@@ -60,12 +84,14 @@ function formatColor(color) {
 }
 
 function toast(yo) {
+    synchronize();
     yo.setAttribute("data-clipboard-text", formatColor(newColour[currentColor]));
     document.getElementById("toast").innerHTML = yo.getAttribute("data-clipboard-text") + " copied to clipboard.";
     copyTextToClipboard(formatColor(newColour[currentColor]));
 }
 
 function copyAll(yo) {
+    synchronize();
     var colors = formatColor(newColour[0]);
     for (var i = 1; i < 6; i++) {
         if (newColour[i]) {
@@ -143,7 +169,6 @@ function copyTextToClipboard(text) {
     textArea.style.boxShadow = 'none';
 
     textArea.style.background = 'transparent';
-
 
     textArea.value = text;
 
