@@ -5,6 +5,11 @@
 * @Last modified time: 2016-09-29T10:34:45+05:30
 */
 
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
 body {
 	-webkit-transition-duration: 1.2s;
 	-moz-transition-duration: 1.2s;
@@ -13,6 +18,18 @@ body {
 
 .btn {
 	width: 150px;
+}
+
+.btn-left {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	width: 100px;
+}
+
+.btn-right {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	width: 50px;
 }
 
 .circle {
