@@ -5,12 +5,8 @@
 * @Last modified time: 2016-09-29T10:34:45+05:30
 */
 
-html, body {
-	height: 100%;
-	margin: 0;
-}
-
 body {
+	-webkit-transform:translateZ(0);
 	-webkit-transition-duration: 1.2s;
 	-moz-transition-duration: 1.2s;
 	transition-duration: 1.2s;
@@ -20,19 +16,8 @@ body {
 	width: 150px;
 }
 
-.btn-left {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-	width: 100px;
-}
-
-.btn-right {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-	width: 50px;
-}
-
 .circle {
+	-webkit-transform:translateZ(0);
 	min-width: 32px;
 	min-height: 32px;
 	background: #fff;
@@ -45,6 +30,7 @@ body {
 }
 
 .circle:active {
+	-webkit-transform:translateZ(0);
 	box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.75);
 	transform: scale(1.1,1.1);
 	border-color: #000;
@@ -52,6 +38,7 @@ body {
 }
 
 .focus {
+	-webkit-transform:translateZ(0);
 	box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.75);
 	-webkit-transform: scale(1.5,1.5);;
 	-webkit-transition: -webkit-transform 0.3s ease;
@@ -62,6 +49,7 @@ body {
 }
 
 .circle:focus {
+	-webkit-transform:translateZ(0);
 	box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.75);
 	-webkit-transform: scale(1.5,1.5);;
 	-webkit-transition: -webkit-transform 0.3s ease;
@@ -72,6 +60,7 @@ body {
 }
 
 .toasty {
+	-webkit-transform:translateZ(0);
 	background: rgba(0, 0, 0, 0.7);
 	font-family: monospace;
 	width: 280px;
@@ -84,6 +73,7 @@ body {
 }
 
 .box{
+	-webkit-transform:translateZ(0);
 	padding: 30px;
 	position: absolute;
 	top: 50%;
@@ -104,6 +94,7 @@ body {
 }
 
 button {
+	-webkit-transform:translateZ(0);
 	font-family: monospace;
 	outline: none;
 	vertical-align: middle;
@@ -120,6 +111,7 @@ button {
 }
 
 button:active {
+	-webkit-transform:translateZ(0);
 	box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.75);
 	transform: scale(1.05,1.05);
 	border-color: #000;
