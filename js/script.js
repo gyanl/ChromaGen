@@ -7,6 +7,9 @@
 
 var newColour = [];
 var format = 'hex';
+//The index of the currently selected color
+var currentColour = 0;
+var numColours = 0;
 var currentColor = 0;
 var numButtons = 6;
 var listOfIndexes = [0,1,2,3,4,5];
@@ -51,6 +54,20 @@ function genColor() {
     return "#" + a;
 }
 
+function changeColour(num) {
+    if (num != -1) {
+        currentColour = num;
+        new_color = newColour[currentColour];
+        document.getElementById('c'+currentColour).focus();
+        //outline();  either use the fn or just write the code here.
+    } else {
+        currentColour = 0;
+        new_color = genColor();
+        newColour.unshift(new_color);
+        if (numColours<6){
+            numColours++;
+        }
+      
 // Returns either a single color, or a gradient definition
 function colorString(color, fullStyle) {
     if (!color) {
@@ -119,6 +136,7 @@ function formatColor(color) {
 }
 
 function toast(yo) {
+    yo.setAttribute("data-clipboard-text", formatColor(newColour[currentColour]));
     synchronize();
     var style = colorString(newColour[currentColor], true);
     yo.setAttribute("data-clipboard-text", style);
@@ -159,14 +177,30 @@ document.onkeydown = function(e) {
 
         case 67:
         var color = document.getElementById('clipboard');
-        toast(color)
+        color.click();
         break;
 
         case 65:
         var color = document.getElementById('copyall');
-        copyAll(color)
+        color.click();
         break;
 
+        case 37:
+        if(currentColour>0){
+            changeColour(currentColour-1);
+        }
+        else{
+            changeColour(numColours-1);
+        }
+        break;
+
+        case 39:
+        if(currentColour<numColours-1){
+            changeColour(currentColour+1);
+        }
+        else{
+            changeColour(0);
+        }
         case 37:
         shiftColor(-1)
         break;
