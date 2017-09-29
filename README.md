@@ -35,3 +35,6 @@ It's useful when you're trying to pick a color for a design.
 * [Ananay Arora](https://github.com/ananay)
 * [Niharika Kohli](https://github.com/Niharika29)
 * [Petr Kletečka](https://github.com/petrkle)
+* [Tóth Dániel](https://github.com/xyztdanid4)
+* [Collin Walker](https://github.com/collnwalkr)
+* [Vaughn Clayton](https://github.com/vclayton)

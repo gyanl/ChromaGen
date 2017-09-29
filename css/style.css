@@ -5,6 +5,11 @@
 * @Last modified time: 2016-09-29T10:34:45+05:30
 */
 
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
 body {
 	-webkit-transition-duration: 1.2s;
 	-moz-transition-duration: 1.2s;
@@ -13,6 +18,18 @@ body {
 
 .btn {
 	width: 150px;
+}
+
+.btn-left {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	width: 100px;
+}
+
+.btn-right {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	width: 50px;
 }
 
 .circle {
@@ -32,6 +49,16 @@ body {
 	transform: scale(1.1,1.1);
 	border-color: #000;
 	border: 4px;
+}
+
+.focus {
+	box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.75);
+	-webkit-transform: scale(1.5,1.5);;
+	-webkit-transition: -webkit-transform 0.3s ease;
+	-moz-transform: scale(1.5,1.5);;
+	-moz-transition: -moz-transform 0.3s ease;
+	transform: scale(1.5,1.5);
+	transition: transform 0.3s ease;
 }
 
 .circle:focus {
