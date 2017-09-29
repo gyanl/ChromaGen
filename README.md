@@ -13,7 +13,7 @@ ChromaGen is a simple random color generator.
 
 ### But why?
 
-It's useful when you're trying to pick a color for a design.
+I made it to learn JavaScript. I suppose you can use it if you want to generate a random color. 
 
 ### Features
 
