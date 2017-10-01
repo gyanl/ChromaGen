@@ -1,8 +1,8 @@
 <!--
 @Author: gyanl, ananayarora
-@Date:   2016-09-29T09:54:38+05:30
-@Last modified by:   ananayarora
-@Last modified time: 2016-09-29T10:27:24+05:30
+@Date:   2017-10-01T09:54:38+05:30
+@Last modified by:   eclecticexistential
+@Last modified time: 2017-10-01T10:27:24+05:30
 -->
 
 <!DOCTYPE html>
@@ -36,16 +36,19 @@
             <br />
             <button class="btn" id='generate' onclick="changeColour(-1)">Color</button>
             <br /><br />
-            <button class="btn btn-left" id='gradient' onclick="changeColour(-1,true)">Gradient</button><button class="btn btn-right" id='rotate' onclick="rotate()"><span id='direction'>&#x2193;</span></button>
+            <a href="colorGradient.html"><button class="btn" id='gradient'>Gradient</button></a>
             <br /><br />
-            <button class="btn" id='clipboard' data-clipboard-text="1" onclick="toast(this)">Copy</button>
+            <button class="btn" id="clipboard" data-clipboard-text="1" onclick="toast(this)">Copy Current Color</button>
             <br /><br />
-            <button class="btn" id='copyall' data-clipboard-text="1" onclick="copyAll(this)">Copy all</button>
+            <button class="btn" id="copyall" data-clipboard-text="1" onclick="copyAll(this)">Copy All Colors</button>
             <br /><br />
             <div class="toasty" id="toast">
                 Welcome to ChromaGen!
             </div>
-            <br /><br /><br />
+            <br />
+			<!-- added area to append textarea for clipboard data -->
+			<div class="results">
+			</div>
             <button id="c0" class="circle" onclick="changeColour(0)"></button>
             <button id="c1" class="circle" onclick="changeColour(1)"></button>
             <button id="c2" class="circle" onclick="changeColour(2)"></button>

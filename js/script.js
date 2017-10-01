@@ -1,8 +1,8 @@
 /**
 * @Author: gyanl, ananayarora, colllnwalkr
-* @Date:   2016-10-03T09:56:56+05:30
-* @Last modified by:   ananayarora
-* @Last modified time: 2016-10-03T10:00:14+05:30
+* @Date:   2017-10-01T09:56:56+05:30
+* @Last modified by:   eclecticexistential
+* @Last modified time: 2017-10-01T10:00:14+05:30
 */
 
 var newColour = [];
@@ -101,13 +101,19 @@ function changeColour(num, gradient) {
 }
 
 function updateUI(color){
+	//made style a var reachable by all if statements //
+    var style = colorString(color);
+	//check to see if location is color gen or gradient gen to elminate error messages in console//
+	if(window.location.toString().includes("index.html")==true){
+        document.getElementById('generate').style.background = style;
+		}
+	if(window.location.toString().includes("colorGradient.html")==true){
+        document.getElementById('rotate').style.background = style;
+		}
     if(color){
-        var style = colorString(color);
         document.body.style.background = style;
         document.getElementById('clipboard').style.background = style;
-        document.getElementById('generate').style.background = style;
         document.getElementById('gradient').style.background = style;
-        document.getElementById('rotate').style.background = style;
         document.getElementById('copyall').style.background = style;
         document.getElementById('clipboard').setAttribute("data-clipboard-text", colorString(color, true));
     }
@@ -140,8 +146,13 @@ function copyAll(yo) {
 }
 
 function start() {
-    var clipboard = new Clipboard('.btn');
     changeColour(-1);
+}
+
+//added to make background on colorGradient.html page start with a gradient color scheme//
+
+function startGradient(){
+	changeColour(-1,5);
 }
 
 function shiftColor(offset) {
@@ -180,29 +191,18 @@ document.onkeydown = function(e) {
 // From: Dean Taylor at http://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
 function copyTextToClipboard(text) {
     var textArea = document.createElement("textarea");
-
-    textArea.style.position = 'fixed';
-    textArea.style.top = 0;
-    textArea.style.left = 0;
-    textArea.style.width = '2em';
-    textArea.style.height = '2em';
-    textArea.style.padding = 0;
-    textArea.style.border = 'none';
-    textArea.style.outline = 'none';
-    textArea.style.boxShadow = 'none';
-
-    textArea.style.background = 'transparent';
-
+//removed data that does nothing//
     textArea.value = text;
+    document.querySelector(".results").appendChild(textArea);
 
-    document.body.appendChild(textArea);
-
-    textArea.select();
+    //does nothing textArea.select(); //
 
     try {
         var successful = document.execCommand('copy');
     } catch (err) {
+		//added an alert if there is an error on copying//
+		alert("Unable to copy");
     }
 
-    document.body.removeChild(textArea);
+    document.querySelector(".results").removeChild(textArea);
 }
