@@ -1,8 +1,8 @@
 /**
 * @Author: gyanl, ananayarora, colllnwalkr
 * @Date:   2017-10-01T09:56:56+05:30
-* @Last modified by:   eclecticexistential
-* @Last modified time: 2017-10-01T10:00:14+05:30
+* @Last modified by:   saxten2011
+* @Last modified time: 2017-10-01T20:00:14+05:30
 */
 
 var newColour = [];
@@ -115,6 +115,7 @@ function updateUI(color){
         document.getElementById('clipboard').style.background = style;
         document.getElementById('gradient').style.background = style;
         document.getElementById('copyall').style.background = style;
+        document.getElementById('solid').style.background = style;
         document.getElementById('clipboard').setAttribute("data-clipboard-text", colorString(color, true));
     }
 }
