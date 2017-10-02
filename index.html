@@ -19,7 +19,7 @@
 </head>
 
 <body onload="start()">
-    <div class="box">
+    <div class="box" id="solid-color">
         <center>
             <div class="header">
                 ChromaGen
@@ -36,7 +36,12 @@
             <br />
             <button class="btn" id='generate' onclick="changeColour(-1)">Color</button>
             <br /><br />
-            <a href="colorGradient.html"><button class="btn" id='gradient'>Gradient</button></a>
+            <button class="btn btn-left" id="gradient" onclick="changeColour(-1,true)">
+                Gradient
+            </button>
+            <button class="btn btn-right" id="rotate" onclick="rotate()">
+                <span id='direction'>&#x2193;</span>
+            </button>
             <br /><br />
             <button class="btn" id="clipboard" data-clipboard-text="1" onclick="toast(this)">Copy Current Color</button>
             <br /><br />

@@ -103,13 +103,9 @@ function changeColour(num, gradient) {
 function updateUI(color){
 	//made style a var reachable by all if statements //
     var style = colorString(color);
-	//check to see if location is color gen or gradient gen to elminate error messages in console//
-	if(window.location.toString().includes("index.html")==true){
-        document.getElementById('generate').style.background = style;
-		}
-	if(window.location.toString().includes("colorGradient.html")==true){
-        document.getElementById('rotate').style.background = style;
-		}
+    document.getElementById('generate').style.background = style;
+    document.getElementById('rotate').style.background = style;
+
     if(color){
         document.body.style.background = style;
         document.getElementById('clipboard').style.background = style;
