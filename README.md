@@ -39,4 +39,5 @@ I made it to learn JavaScript. I suppose you can use it if you want to generate 
 * [Collin Walker](https://github.com/collnwalkr)
 * [Vaughn Clayton](https://github.com/vclayton)
 * [EclecticExistential](https://github.com/eclecticexistential)
+* [Srijit S Madhavan](https://github.com/srijitcoder)
 * [SAXTEN2011](https://github.com/SAXTEN2011)
