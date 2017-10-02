@@ -1,8 +1,8 @@
 /**
 * @Author: gyanl, ananayarora, colllnwalkr
 * @Date:   2017-10-01T09:56:56+05:30
-* @Last modified by:   eclecticexistential
-* @Last modified time: 2017-10-01T10:00:14+05:30
+* @Last modified by:   saxten2011
+* @Last modified time: 2017-10-01T20:00:14+05:30
 */
 
 var newColour = [];
@@ -63,9 +63,9 @@ function colorString(color, fullStyle) {
         case 2:
             var grad = 'linear-gradient(to ' + orientations[orientation] + ', ' + formatColor(colors[0]) + ', ' + formatColor(colors[1]) + ')';
             if (fullStyle) {
-                grad = 'background: ' + formatColor(colors[0]) + '; /* fallback for old browsers */\n' +
-                    'background: -webkit-' + grad + '; /* Chrome 10-25, Safari 5.1-6 */\n' +
-                    'background: ' + grad + '; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */';
+                grad = 'background: ' + formatColor(colors[0]) + '; /* fallback for old browsers */ <br>' +
+                    'background: -webkit-' + grad + '; /* Chrome 10-25, Safari 5.1-6 */ <br>' +
+                    'background: ' + grad + '; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ <br><br><br>';
             }
             return grad;
     }
@@ -111,6 +111,7 @@ function updateUI(color){
         document.getElementById('clipboard').style.background = style;
         document.getElementById('gradient').style.background = style;
         document.getElementById('copyall').style.background = style;
+        document.getElementById('solid').style.background = style;
         document.getElementById('clipboard').setAttribute("data-clipboard-text", colorString(color, true));
     }
 }

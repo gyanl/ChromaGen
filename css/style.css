@@ -161,7 +161,7 @@ button:active {
 
 /* added media queries for larger screens */
 
-@media (min-width:400px){
+@media (min-width:900px){
 	body{
 		display:flex;
 		justify-content:center;
