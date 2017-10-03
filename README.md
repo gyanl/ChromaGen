@@ -41,4 +41,4 @@ I made it to learn JavaScript. I suppose you can use it if you want to generate 
 * [EclecticExistential](https://github.com/eclecticexistential)
 * [Srijit S Madhavan](https://github.com/srijitcoder)
 * [SAXTEN2011](https://github.com/SAXTEN2011)
-* [galczo5] (https://github.com/galczo5)
+* [galczo5](https://github.com/galczo5)
